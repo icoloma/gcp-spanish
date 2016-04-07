@@ -5,6 +5,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="tufte.css"/>
   <link rel="stylesheet" href="latex.css"/>
+  <link rel="stylesheet" href="kagenda-styles.css"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -33,10 +34,12 @@
       </p>
     </section>
 
-    <section>
+    <section id="agenda">
       <h2>Nuestra agenda</h2>
       <p class="subtitle">Conoce a nuestros ponentes</p>
-      <p>Danos algo de tiempo para aclarar la agenda. Estaremos en un par de días.
+      <div class="kagenda">
+        <div class="loading" />
+      </div>
     </section>
 
     <section>
@@ -54,5 +57,13 @@
     </section>
     
   </article>
+  <script src="js/koliseo-agenda.min.js"></script>
+  <script>
+    Koliseo.agenda.render({
+      c4pUrl: 'https://www.koliseo.com/gdgcaceres/google-cloud-platform-en-espanol/r4p/5640998268960768',
+      oauthClientId: 5760660889665536,
+      element: document.querySelector('.kagenda')
+    });
+  </script>
 </body>
 </html>
